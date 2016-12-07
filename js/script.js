@@ -139,6 +139,16 @@ $(document).ready(function(){
       $profileName.html(user.displayName);
       $profileEmail.html(user.email);
       $img.attr("src",user.photoURL);
+        $age.on('value', function(snap){
+          $profileAge.html(snap.val());
+        });
+        $job.on('value', function(snap){
+          $profileJob.html(snap.val());
+        });
+
+        $intro.on('value', function(snap){
+          $profileIntroduction.html(snap.val());
+        });
     } else {
       console.log("not logged in");
       $profileName.html("N/A");
